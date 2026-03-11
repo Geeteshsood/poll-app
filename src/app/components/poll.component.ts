@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { PollApi } from '../services/poll-api';
 import { Poll } from '../types/poll.model';
 import { FormsModule } from '@angular/forms';
+import { UploadComponent } from './upload/upload.component';
 
 @Component({
   selector: 'app-poll',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, UploadComponent],
   templateUrl: './poll.component.html',
   styleUrl: './poll.component.scss',
 })

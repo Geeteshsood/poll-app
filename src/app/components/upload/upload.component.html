@@ -1,0 +1,35 @@
+<div class="profile-wrapper">
+
+  <div class="profile-card">
+
+    <h3>Profile Image</h3>
+
+    <div class="image-preview">
+
+      @if(previewUrl()){
+        <img [src]="previewUrl()" alt="Preview Image">
+      }
+      @else if(s3Url()){
+        <img [src]="s3Url()" alt="Profile Image">
+      }
+
+       @if(uploading()){
+            <div class="upload-overlay">
+            <div class="loader"></div>
+            </div>
+        }
+    </div>
+
+    <label class="file-label">
+      Choose Image
+      <input type="file" (change)="onFileSelected($event)">
+    </label>
+
+    <button class="upload-btn" (click)="upload()"
+     [disabled]="!selectedFile() || uploading()">
+      Upload Image
+    </button>
+
+  </div>
+
+</div>
