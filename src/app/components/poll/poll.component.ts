@@ -1,14 +1,13 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PollApi } from '../services/poll-api';
-import { Poll } from '../types/poll.model';
+import { PollApi } from '../../services/poll-api';
+import { Poll } from '../../types/poll.model';
 import { FormsModule } from '@angular/forms';
-import { UploadComponent } from './upload/upload.component';
 
 @Component({
   selector: 'app-poll',
   standalone: true,
-  imports: [FormsModule, CommonModule, UploadComponent],
+  imports: [FormsModule, CommonModule],
   templateUrl: './poll.component.html',
   styleUrl: './poll.component.scss',
 })

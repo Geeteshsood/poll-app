@@ -3,11 +3,11 @@ import { S3Upload } from '../../services/s3-upload';
 import { switchMap } from 'rxjs';
 
 @Component({
-  selector: 'app-upload',
-  templateUrl: './upload.component.html',
-  styleUrl: './upload.component.scss',
+  selector: 'app-profile-pic',
+  templateUrl: './profile-pic.component.html',
+  styleUrl: './profile-pic.component.scss',
 })
-export class UploadComponent implements OnInit {
+export class ProfilePicComponent implements OnInit {
 
   file!: File;
 
